@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV-Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-md-12">
+                <h2>CV database Profile List</h2>
+            </div>
+        </div>
+        {% for profile in profiles%}
+        <div class="row">
+            <div class="col-md-6">
+             {{profile.name}}
+            </div>
+
+            <div class="col-md-6">
+                <a href="/{{profile.id}}" class="btn btn-warning">Download CV from list</a>
+            </div>
+        </div>
+        <hr>
+        {%endfor%}
+
+    </div>
+</body>
+</html>
